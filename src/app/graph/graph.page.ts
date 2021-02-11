@@ -1,6 +1,6 @@
+import {Chart} from 'chart.js';
 import { PropertyWrite } from '@angular/compiler';
 import { newArray } from '@angular/compiler/src/util';
-import {Chart} from 'chart.js';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-graph',
