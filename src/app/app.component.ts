@@ -33,6 +33,11 @@ export class AppComponent {
         url: '/graph',
         icon: 'analytics'
       },
+      {
+        title:'Лабораторна робота №3',
+        url: '/file',
+        icon: 'code-slash-outline'
+      },
     ];
   }
   initializeApp() {
