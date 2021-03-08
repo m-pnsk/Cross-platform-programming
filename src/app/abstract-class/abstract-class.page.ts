@@ -41,7 +41,8 @@ export class AbstractClassPage implements OnInit {
         this.iS++;
         this.avgS+=element.C;
       }
-      console.log(element.show())});
+      console.log(element.show())
+    });
       this.avgW/=this.iW;
       this.avgS/=this.iS;
   }
