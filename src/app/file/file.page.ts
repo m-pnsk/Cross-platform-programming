@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
-import { concat } from 'rxjs';
+
 @Component({
   selector: 'app-file',
   templateUrl: './file.page.html',
@@ -10,7 +10,7 @@ export class FilePage implements OnInit {
   data: any=[];
   bDay: Date;
   showDetails:boolean[]=new Array(1000).fill(false);
-  dataUrl= 'https://api.jsonbin.io/b/602bae120665b21b00b8062b/2';
+  dataUrl= 'https://api.jsonbin.io/b/602bae120665b21b00b8062b/3';
   loading: any;
   
   constructor(public loadingController:LoadingController) {    

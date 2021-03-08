@@ -38,6 +38,11 @@ export class AppComponent {
         url: '/file',
         icon: 'code-slash-outline'
       },
+      {
+        title:'Лабораторна робота №4',
+        url: '/abstract-class',
+        icon: 'contract-outline'
+      }
     ];
   }
   initializeApp() {
