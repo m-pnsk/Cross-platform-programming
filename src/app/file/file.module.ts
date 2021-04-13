@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { FilePageRoutingModule } from './file-routing.module';
 
 import { FilePage } from './file.page';
-
+import {MyComponent} from './../my/my.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +15,6 @@ import { FilePage } from './file.page';
     IonicModule,
     FilePageRoutingModule
   ],
-  declarations: [FilePage]
+  declarations: [FilePage, MyComponent]
 })
 export class FilePageModule {}

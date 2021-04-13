@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { GraphPageRoutingModule } from './graph-routing.module';
+import { InterfacepagePageRoutingModule } from './interfacepage-routing.module';
 
-import { GraphPage } from './graph.page';
+import { InterfacepagePage } from './interfacepage.page';
 import {MyComponent} from './../my/my.component';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    GraphPageRoutingModule
+    InterfacepagePageRoutingModule
   ],
-  declarations: [GraphPage, MyComponent]
+  declarations: [InterfacepagePage, MyComponent]
 })
-export class GraphPageModule {}
+export class InterfacepagePageModule {}

@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ArraypagePageRoutingModule } from './arraypage-routing.module';
 
 import { ArraypagePage } from './arraypage.page';
-
+import {MyComponent} from './../my/my.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +15,6 @@ import { ArraypagePage } from './arraypage.page';
     IonicModule,
     ArraypagePageRoutingModule
   ],
-  declarations: [ArraypagePage]
+  declarations: [ArraypagePage, MyComponent]
 })
 export class ArraypagePageModule {}

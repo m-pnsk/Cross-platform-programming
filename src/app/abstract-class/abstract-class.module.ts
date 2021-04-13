@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { AbstractClassPageRoutingModule } from './abstract-class-routing.module';
 
 import { AbstractClassPage } from './abstract-class.page';
-
+import {MyComponent} from './../my/my.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +15,6 @@ import { AbstractClassPage } from './abstract-class.page';
     IonicModule,
     AbstractClassPageRoutingModule
   ],
-  declarations: [AbstractClassPage]
+  declarations: [AbstractClassPage, MyComponent]
 })
 export class AbstractClassPageModule {}

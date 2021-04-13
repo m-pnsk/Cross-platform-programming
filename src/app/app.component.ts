@@ -42,6 +42,11 @@ export class AppComponent {
         title:'Лабораторна робота №4',
         url: '/abstract-class',
         icon: 'contract-outline'
+      },
+      {
+        title:'Лабораторна робота №6',
+        url: '/interfacepage',
+        icon: 'contract-outline'
       }
     ];
   }
