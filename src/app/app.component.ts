@@ -48,6 +48,12 @@ export class AppComponent {
         url: '/interfacepage',
         icon: 'contract-outline'
       }
+      ,
+      {
+        title:'Лабораторна робота №7',
+        url: '/servicepage',
+        icon: 'contract-outline'
+      }
     ];
   }
   initializeApp() {

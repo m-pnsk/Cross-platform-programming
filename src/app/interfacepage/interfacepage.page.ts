@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Interface } from 'readline';
 
 @Component({
   selector: 'app-interfacepage',
