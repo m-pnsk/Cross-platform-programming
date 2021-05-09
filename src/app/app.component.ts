@@ -47,11 +47,15 @@ export class AppComponent {
         title:'Лабораторна робота №6',
         url: '/interfacepage',
         icon: 'contract-outline'
-      }
-      ,
+      },
       {
         title:'Лабораторна робота №7',
         url: '/servicepage',
+        icon: 'contract-outline'
+      },
+      {
+        title:'Лабораторна робота №8',
+        url: '/observablepage',
         icon: 'contract-outline'
       }
     ];

@@ -25,6 +25,10 @@ const routes: Routes = [
     path: 'servicepage',
     loadChildren: () => import('./servicepage/servicepage.module').then( m => m.ServicepagePageModule)
   },
+  {
+    path: 'observablepage',
+    loadChildren: () => import('./observablepage/observablepage.module').then( m => m.ObservablepagePageModule)
+  },
 ];
 
 @NgModule({
