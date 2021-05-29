@@ -1,21 +1,23 @@
-<app-my name="Лабораторна робота №8"></app-my>
+<app-my name="Лабораторна робота №8-9"></app-my>
 
 <ion-content [fullscreen]="true">
   <ion-text><br>Є довідник театрів в якому вказаний список акторів, які в ньому працюють. Необхідно вивести
-    список книг лише для обраної мови та реалізувати додавання нової мови та
-    книги та зміну поточної мови.<br><br></ion-text>
-  <ion-button (click)="nextTheater()">Наступний театр</ion-button>
+    список акторів лише для обраного театру та реалізувати додавання нового театру та
+    актора та зміну поточного театру.<br><br></ion-text>
+  
   <ion-item>
-    <ion-label>
-      Поточний театр:
-    </ion-label>
-    <ion-label>
-      {{theater.name}}
-    </ion-label>
+    <ion-button (click)="nextTheater()">Наступний театр</ion-button>
+    <ion-label>Поточний театр:</ion-label>
+    <ion-label>{{theater.name}}</ion-label>
   </ion-item>
-  <ion-item *ngFor="let actor of actorList.searchActorResult; let j = index">
-    {{actor}}
-  </ion-item>
+  <ion-card *ngFor="let actor of actorList.searchActor; let j = index">
+    <ion-item>{{actor.first_name}}</ion-item>
+    <ion-item>{{actor.last_name}}</ion-item>
+    <ion-item>{{actor.bDay}}</ion-item>
+    <ion-item>{{actor.rank}}</ion-item>
+    <ion-item>{{actor.experience}}</ion-item>
+    <ion-button (click)="deleteActor(actor.$key)">Видалити</ion-button>
+  </ion-card>
 
   <ion-item>
     <ion-label position="stacked">Введіть новий театр</ion-label>
@@ -30,8 +32,28 @@
     </ion-card-header>
     <ion-card-content>
      <ion-label position="stacked">Введіть ім'я актора</ion-label>
-     <ion-input id="ac" #InputName></ion-input>
-     <ion-button (click)="addActor(InputName.value)">Додати актора</ion-button>
+     <ion-input #InputFName></ion-input>
+     <ion-label position="stacked">Введіть прізвище актора</ion-label>
+     <ion-input #InputLName></ion-input>
+     <ion-label position="stacked">Введіть дату народження актора</ion-label>
+     <ion-input type="date" #InputBDay></ion-input>
+     <ion-label position="stacked">Введіть звання актора</ion-label>
+     <br>
+     <select #InputRank>
+       <option>
+         артист
+       </option>
+       <option>
+        Народний артист України
+       </option>
+      <option>
+        Заслужений артист України
+      </option>
+     </select>
+     <br>
+     <ion-label position="stacked">Введіть стаж актора</ion-label>
+     <ion-input #InputExp></ion-input>
+     <ion-button (click)="addActor(InputFName.value, InputLName.value, InputBDay.value, InputRank.value, InputExp.value)">Додати актора</ion-button>
     </ion-card-content>
   </ion-card>
 

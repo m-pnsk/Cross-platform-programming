@@ -14,5 +14,4 @@ export class ConfigService {
   }
   constructor() { }
 }
-var theaterList= new TheaterList();
-const DEFAULT_THEATER=theaterList.theater.get(0);
+const DEFAULT_THEATER={"id":0, "name":"Одеський"};

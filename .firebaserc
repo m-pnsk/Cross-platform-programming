@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "database-lr9": {
+      "hosting": {
+        "app": [
+          "database-lr9"
+        ]
+      }
+    }
+  }
+}
