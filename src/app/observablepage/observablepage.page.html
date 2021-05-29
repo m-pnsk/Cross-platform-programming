@@ -9,6 +9,7 @@
     <ion-button (click)="nextTheater()">Наступний театр</ion-button>
     <ion-label>Поточний театр:</ion-label>
     <ion-label>{{theater.name}}</ion-label>
+    <ion-button (click)="deleteTheater(theater.$key)">Видалити</ion-button>
   </ion-item>
   <ion-card *ngFor="let actor of actorList.searchActor; let j = index">
     <ion-item>{{actor.first_name}}</ion-item>

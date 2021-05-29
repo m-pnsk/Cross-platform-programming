@@ -38,6 +38,7 @@ export class ObservablepagePage implements OnInit {
     this.fetchTask(this.bdTheater,false);
     let taskRes1=this.fbService.getRecordList(this.bdTheater,false);
     taskRes1.snapshotChanges().subscribe(res=>{
+      this.theaters.theater=[];
       res.forEach(item=>{
       let b = item.payload.toJSON();
       b['$key']=item.key;
@@ -62,6 +63,25 @@ export class ObservablepagePage implements OnInit {
           }
       }
       this.actorList.search(this.theater.id);
+  }
+  deleteTheater(id){
+    let idTH;
+    this.fbService.deleteTheater(id);
+      for(let i=0; i<this.theaters.theater.length; i++){
+          if(this.theaters.theater[i].$key==id){
+            idTH=this.theaters.theater[i].id;
+             delete this.subscription[idTH];
+             delete this.theaters.theater[i]; 
+             this.nextTheater();
+             break;
+          }
+      }
+      for(let i=0; i<this.actorList.actorList.length; i++){
+        if(this.actorList.actorList[i].idTH==idTH){
+           this.fbService.deleteActor(this.actorList.actorList[i].$key);
+           delete this.actorList.actorList[i]; 
+        }
+    }
   }
   nextTheater(){
     if(this.count<this.theaters.theater.length-1){
@@ -94,6 +114,7 @@ export class ObservablepagePage implements OnInit {
       t.id=this.theaters.theater.length;
       t.name=theater;
       this.fbService.createTheater(t);
+      this.theaters.add(t);
     }
   }
   ngOnDestroy(){

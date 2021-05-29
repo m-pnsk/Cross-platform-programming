@@ -37,6 +37,10 @@ export class FirebaseService {
     this.bdRef=this.db.object('/Actor/'+id)
     this.bdRef.remove();
   }
+  deleteTheater(id:string){
+    this.bdRef=this.db.object('/Theater/'+id)
+    this.bdRef.remove();
+  }
   getRecordList(bd:string, op:boolean){
     if(op){
       this.actorListRef=this.db.list('/'+bd);
